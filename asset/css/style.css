@@ -8,6 +8,7 @@ h1 {
 p{
     font-family: var(--fonte);
     color: whitesmoke;
+    text-align: center;
 }
 
 img {
