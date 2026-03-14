@@ -5,6 +5,13 @@ h1 {
     color:blue;
     margin-top:auto;
 }
+
+img {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
 .logo{
   width:160px;
   height:auto;
