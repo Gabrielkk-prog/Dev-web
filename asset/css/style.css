@@ -5,6 +5,12 @@ h1 {
     color:blue;
     margin-top:auto;
 }
+h2 {
+    font-family: var(--fonte);
+    font-size: 20px;
+    text-align: center;
+    color: whitesmoke;
+}
 p{
     font-family: var(--fonte);   /*root*/
     color: whitesmoke;
