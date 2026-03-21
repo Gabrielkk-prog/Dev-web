@@ -24,6 +24,7 @@ h2 {
     text-align: center;
     color: #abb2bf; /* Cinza claro para texto secundário */
     margin-top: auto;
+    box-shadow: 0px 1px 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 /* Estilos para parágrafos - Fonte de código e cor cinza */
@@ -46,6 +47,7 @@ p {
     margin: 20px auto; /* Centraliza e dá espaço em cima/baixo */
     width: 80%; /* Largura responsiva */
     max-width: 600px; /* Limite máximo para telas grandes */
+    
 }
 
 /* Estilos para imagens - Mantém centralizada */
