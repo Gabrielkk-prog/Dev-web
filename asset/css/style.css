@@ -93,6 +93,8 @@ form {
     margin: 20px auto; /* Centraliza */
     width: 80%; /* Largura responsiva */
     max-width: 400px; /* Limite para formulários */
+    display: flex;
+    flex-direction: column;
 }
 
 /* Rótulos dos campos - Cor cinza */
@@ -100,22 +102,36 @@ label {
     color: #abb2bf;
 }
 
+form > label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
 /* Estilos para grupo de radio buttons */
 .radio-group {
     display: flex;
     flex-direction: column;
     margin-top: 10px;
+    margin-bottom: 15px;
+    padding-left: 0;
 }
 
-.radio-group label {
+.radio-item {
     display: flex;
     align-items: center;
-    margin-bottom: 5px;
-    color: #abb2bf;
+    margin-bottom: 8px;
+    padding-left: 0;
 }
 
-.radio-group input[type="radio"] {
+.radio-item input[type="radio"] {
     margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.radio-item label {
+    color: #abb2bf;
+    margin: 0;
 }
 
 /* Estilos para grupo de checkboxes */
@@ -123,17 +139,25 @@ label {
     display: flex;
     flex-direction: column;
     margin-top: 10px;
+    margin-bottom: 15px;
+    padding-left: 0;
 }
 
-.checkbox-group label {
+.checkbox-item {
     display: flex;
     align-items: center;
-    margin-bottom: 5px;
-    color: #abb2bf;
+    margin-bottom: 8px;
+    padding-left: 0;
 }
 
-.checkbox-group input[type="checkbox"] {
+.checkbox-item input[type="checkbox"] {
     margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.checkbox-item label {
+    color: #abb2bf;
+    margin: 0;
 }
 
 .custume-radio input[type="radio"]{
@@ -150,6 +174,21 @@ input, select {
     margin-bottom: 10px; /* Espaço abaixo */
     width: 100%; /* Largura total */
     font-family: 'Courier New', monospace;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+/* Estilos para H1 dentro do form */
+form H1 {
+    font-size: 18px;
+    margin: 15px 0 10px 0;
+    text-align: left;
+    color: #61dafb;
 }
 
 /* Efeito ao focar nos campos - Borda azul */
