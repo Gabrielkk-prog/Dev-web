@@ -26,13 +26,27 @@
         <input type="date" id="data_nascimento" name="data_nascimento"><br><br>
         
         <label for="area">Área de atuação:</label><br>
-        <select id="area" name="area">
-            <option>Estudante</option>
-            <option>Desenvolvedor</option>
-            <option>Profissional de TI</option>
-            <option>Empreendedor</option>
-            <option>Outro</option>
-        </select><br><br>
+        <div class="radio-group">
+            <input type="radio" id="estudante" name="area" value="Estudante">
+            <label for="estudante">Estudante</label><br>
+            <input type="radio" id="desenvolvedor" name="area" value="Desenvolvedor">
+            <label for="desenvolvedor">Desenvolvedor</label><br>
+            <input type="radio" id="profissional" name="area" value="Profissional de TI">
+            <label for="profissional">Profissional de TI</label><br>
+            <input type="radio" id="empreendedor" name="area" value="Empreendedor">
+            <label for="empreendedor">Empreendedor</label><br>
+            <input type="radio" id="outro" name="area" value="Outro">
+            <label for="outro">Outro</label><br>
+        </div>
+        <H1>Qual atividade voce tem mais interesse?</H1>
+        <input type="radio" id="atividade1" name="atividade" value="atividade1">
+        <label for="atividade1">Palestra sobre inteligência artificial</label><br>
+
+        <input type="radio" id="atividade2" name="atividade" value="atividade2">
+        <label for="atividade2">Workshop de desenvolvimento mobile</label><br>
+
+        <input type="radio" id="atividade3" name="atividade" value="atividade3">
+        <label for="atividade3">Ambos</label><br>
     </form>
   
    

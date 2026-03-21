@@ -98,9 +98,31 @@ form {
 /* Rótulos dos campos - Cor cinza */
 label {
     color: #abb2bf;
-    font-family: 'Courier New', monospace;
 }
 
+/* Estilos para grupo de radio buttons */
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    color: #abb2bf;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 10px;
+}
+
+
+.custume-radio imput[type = "radio"]{
+    display: none;
+
+}
 /* Campos de entrada e selects - Estilo de caixa de código */
 input, select {
     background-color: #21252b; /* Fundo escuro para os campos */
