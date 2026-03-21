@@ -71,7 +71,7 @@ nav {
     border-bottom: 1px solid #5c6370; /* Linha separadora embaixo */
 }
 
-/* Links na navegação - Cores de código */
+/* Links na navegação - Cores de código */                /* Puis tres efeitos para a mesma nav*/
 nav a {
     color: #61dafb; /* Azul para links */
     text-decoration: none; /* Sem sublinhado */
