@@ -1,42 +1,125 @@
+/* Estilos para títulos principais (H1) - Mudamos para fonte de código e cor azul clara para parecer um editor */
 h1 {
-    font-family: var(--fonte);/*root*/
-    font-size:40px;
-    text-align:center;
-    color:blue;
-    margin-top:auto;
-}
-h2 {
-    font-family: var(--fonte);
-    font-size: 20px;
+    font-family: 'Courier New', monospace; /* Usa fonte tipo máquina de escrever, como em editores de programação */
+    font-size: 40px;
     text-align: center;
-    color: whitesmoke;
+    color: #61dafb; /* Cor azul clara, inspirada no VS Code */
     margin-top: auto;
 }
-p{
-    font-family: var(--fonte);   /*root*/
-    color: whitesmoke;
-    text-align: center;          /*centraliza o texto*/
+
+/* Classe para palavras que parecem "variáveis" no código - cor verde */
+.variable {
+    color: #98c379; /* Verde para destacar palavras como variáveis em linguagens de programação */
 }
+
+/* Classe para palavras-chave - cor vermelha */
+.keyword {
+    color: #e06c75; /* Vermelho para palavras importantes, como comandos */
+}
+
+/* Estilos para subtítulos (H2) - Mantém o visual de código com cinza claro */
+h2 {
+    font-family: 'Courier New', monospace;
+    font-size: 20px;
+    text-align: center;
+    color: #abb2bf; /* Cinza claro para texto secundário */
+    margin-top: auto;
+}
+
+/* Estilos para parágrafos - Fonte de código e cor cinza */
+p {
+    font-family: 'Courier New', monospace;
+    color: #abb2bf;
+    text-align: center;
+}
+
+/* Estilos para o quadro (container) - Fundo cinza escuro com bordas para parecer um bloco de código */
 .quadro {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content:center;
-    background-color: dimgray;
-
-
+    justify-content: center;
+    background-color: #3e4451; /* Fundo cinza médio, como fundo de editor */
+    border: 1px solid #5c6370; /* Borda cinza para delimitar o bloco */
+    border-radius: 5px; /* Cantos arredondados suaves */
+    padding: 20px; /* Espaço interno para não ficar apertado */
+    margin: 20px auto; /* Centraliza e dá espaço em cima/baixo */
+    width: 80%; /* Largura responsiva */
+    max-width: 600px; /* Limite máximo para telas grandes */
 }
 
-
-img {        /*é aqui que eu mudo minha imagem*/
+/* Estilos para imagens - Mantém centralizada */
+img {
     width: 150px;
     height: auto;
     display: block;
     margin: 20px auto;
 }
+
+/* Estilos para o corpo da página - Fundo escuro para visual de IDE */
 body {
-    background-color: #121212;  /*copiei a cor do vscode, achei bonita*/ 
+    background-color: #2d3339; /* Fundo cinza escuro, como em editores noturnos */
+    color: #abb2bf; /* Cor padrão do texto em cinza claro */
+    font-family: 'Courier New', monospace; /* Fonte de código para tudo */
 }
-:root{    /*esse cara me ajuda a usar a mesma fonte sem ter que escrever tudo de novo*/
-    --fonte: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+/* Estilos para a navegação - Barra superior como abas de editor */
+nav {
+    background-color: #21252b; /* Fundo ainda mais escuro para a barra */
+    padding: 10px; /* Espaço interno */
+    text-align: center;
+    border-bottom: 1px solid #5c6370; /* Linha separadora embaixo */
+}
+
+/* Links na navegação - Cores de código */
+nav a {
+    color: #61dafb; /* Azul para links */
+    text-decoration: none; /* Sem sublinhado */
+    margin: 0 10px; /* Espaço entre links */
+    font-family: 'Courier New', monospace;
+}
+
+/* Efeito ao passar o mouse nos links */
+nav a:hover {
+    color: #98c379; /* Muda para verde ao hover */
+}
+
+/* Estilos para formulários - Como um painel de entrada de código */
+form {
+    background-color: #3e4451; /* Fundo cinza, igual ao quadro */
+    border: 1px solid #5c6370; /* Borda para parecer um campo */
+    border-radius: 5px; /* Cantos arredondados */
+    padding: 20px; /* Espaço interno */
+    margin: 20px auto; /* Centraliza */
+    width: 80%; /* Largura responsiva */
+    max-width: 400px; /* Limite para formulários */
+}
+
+/* Rótulos dos campos - Cor cinza */
+label {
+    color: #abb2bf;
+    font-family: 'Courier New', monospace;
+}
+
+/* Campos de entrada e selects - Estilo de caixa de código */
+input, select {
+    background-color: #21252b; /* Fundo escuro para os campos */
+    color: #abb2bf; /* Texto cinza */
+    border: 1px solid #5c6370; /* Borda cinza */
+    border-radius: 3px; /* Cantos levemente arredondados */
+    padding: 5px; /* Espaço interno pequeno */
+    margin-bottom: 10px; /* Espaço abaixo */
+    width: 100%; /* Largura total */
+    font-family: 'Courier New', monospace;
+}
+
+/* Efeito ao focar nos campos - Borda azul */
+input:focus, select:focus {
+    border-color: #61dafb; /* Borda azul ao clicar */
+    outline: none; /* Remove o contorno padrão do navegador */
+}
+
+/* Variável global para fonte - Agora usa monospace para consistência */
+:root {
+    --fonte: 'Courier New', monospace; /* Define a fonte padrão como de código */
 }

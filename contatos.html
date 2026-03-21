@@ -13,17 +13,26 @@
     </nav>
     
     <form>
-        <select name="area">
-            <option>estudante></option>
-            <option>desenvolvedor</option>
-            <option>proficional de TI</option>
-            <option>empreendedor</option>
-            <option>outro</option>
-        </select><br><br>
+        <label for="nome">Nome:</label><br>
+        <input type="text" id="nome" name="nome"><br><br>
         
-        <input type="checkbox">faculdade/Escola<br>
-        <input type="checkbox">Amigos<br>
-        <input type="checkbox">internet<br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+        
+        <label for="telefone">Telefone:</label><br>
+        <input type="tel" id="telefone" name="telefone"><br><br>
+        
+        <label for="data_nascimento">Data Nascimento:</label><br>
+        <input type="date" id="data_nascimento" name="data_nascimento"><br><br>
+        
+        <label for="area">Área de atuação:</label><br>
+        <select id="area" name="area">
+            <option>Estudante</option>
+            <option>Desenvolvedor</option>
+            <option>Profissional de TI</option>
+            <option>Empreendedor</option>
+            <option>Outro</option>
+        </select><br><br>
     </form>
   
    
