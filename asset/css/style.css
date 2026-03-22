@@ -24,7 +24,7 @@ h2 {
     text-align: center;
     color: #abb2bf; /* Cinza claro para texto secundário */
     margin-top: auto;
-    
+
 }
 
 /* Estilos para parágrafos - Fonte de código e cor cinza */
@@ -202,4 +202,22 @@ input:focus, select:focus {
 /* Variável global para fonte - Agora usa monospace para consistência */
 :root {
     --fonte: 'Courier New', monospace; /* Define a fonte padrão como de código */
+}
+.btn {
+    display: flex;
+    background-color: #22b9df; /* Fundo azul para o botão */
+    color: #21252b; /* Texto escuro para contraste */
+    border: none; /* Sem borda */
+    border-radius: 3px; /* Cantos arredondados */
+    padding: 10px 20px; /* Espaço interno */
+    width: 100px;
+    font-family: 'Courier New', monospace; /* Fonte de código */
+    font-size: 16px;
+    cursor: pointer; /* Cursor de mão ao passar */
+    margin-top: 20px;
+    align-items: center;
+}
+.btn:hover {
+    background: #55daff;
+
 }
