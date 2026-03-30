@@ -1,11 +1,8 @@
+const dataEvento = new Date(2026, 7, 23, 19, 0, 0); 
+
 function atualizarContador() {
   const agora = new Date();
   const diferenca = dataEvento - agora;
-
-  if (diferenca <= 0) {
-    document.getElementById("tempo").innerText = "Evento iniciado!";
-    return;
-  }
 
   const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
   const horas = Math.floor((diferenca / (1000 * 60 * 60)) % 24);
@@ -15,3 +12,7 @@ function atualizarContador() {
   document.getElementById("tempo").innerText =
     `${dias} dias, ${horas}h ${minutos}m ${segundos}s`;
 }
+
+setInterval(atualizarContador, 1000);
+
+atualizarContador();
