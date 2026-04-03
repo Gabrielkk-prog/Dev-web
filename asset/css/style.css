@@ -42,10 +42,14 @@ nav a:hover {
 .hero {
     position: relative;
     margin: 0 auto;
+    overflow: hidden;
+    min-height: 420px;
 }
 .hero img {
     width: 100%;
-    max-height: 420px;
+    height: auto;
+    min-height: 420px;
+    max-height: 520px;
     object-fit: cover;
     filter: brightness(0.65);
 }
@@ -55,6 +59,7 @@ nav a:hover {
     left: 0; top: 0; right: 0; bottom: 0;
     background: linear-gradient(120deg, rgba(165,108,255,0.55), rgba(82, 61, 126, 0.7));
     pointer-events: none;
+    z-index: 1;
 }
 .hero-text {
     position: absolute;
@@ -70,31 +75,6 @@ nav a:hover {
     text-align: center;
     box-shadow: 0 10px 30px rgba(0,0,0,0.35);
     z-index: 2;
-}
-
-.hero {
-    position: relative;
-    margin: 0 auto;
-    overflow: hidden;
-    min-height: 420px;
-}
-
-.hero img {
-    width: 100%;
-    height: auto;
-    min-height: 420px;
-    max-height: 520px;
-    object-fit: cover;
-    filter: brightness(0.65);
-}
-
-.hero::after {
-    content: "";
-    position: absolute;
-    left: 0; top: 0; right: 0; bottom: 0;
-    background: linear-gradient(120deg, rgba(165,108,255,0.55), rgba(82, 61, 126, 0.7));
-    pointer-events: none;
-    z-index: 1;
 }
 .hero-text h1 {
     margin: 0 0 8px;
@@ -296,10 +276,7 @@ footer a:hover { color: #dad8ff; }
     }
     .hero-text {
         position: relative;
-        left: 50%;
-        top: auto;
-        transform: translateX(-50%);
-        width: min(95%, 100%);
+        width: 95%;
         max-width: 95%;
         margin: 0 auto;
         padding: 16px;
