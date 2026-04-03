@@ -288,9 +288,11 @@ footer a:hover { color: #dad8ff; }
         pointer-events: none;
     }
     .hero-text {
-        position: relative;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
         width: clamp(260px, 85%, 90%);
-        margin: 0 auto;
         padding: clamp(12px, 2.5vw, 16px);
         background: rgba(255,255,255,0.98);
         z-index: 3;
