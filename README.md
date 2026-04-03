@@ -32,7 +32,7 @@ Dev-web/
 
 - HTML5
 - CSS3
-
+- javaScript
 ## Contato
 
 Para mais informações sobre o evento:
