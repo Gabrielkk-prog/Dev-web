@@ -266,30 +266,16 @@ footer a:hover { color: #dad8ff; }
 
 @media(max-width:720px) {
     .hero {
-        display: grid;
-        place-items: center;
-        min-height: 520px;
         position: relative;
-    }
-    .hero img {
-        position: absolute;
-        inset: 0;
         width: 100%;
-        height: 100%;
-        object-fit: cover;
-        filter: brightness(0.65);
-    }
-    .hero::after {
-        position: absolute;
-        left: 0; top: 0; right: 0; bottom: 0;
-        background: linear-gradient(120deg, rgba(165,108,255,0.6), rgba(82,61,126,0.75));
-        z-index: 1;
-        pointer-events: none;
+        min-height: 520px;
     }
     .hero-text {
-        position: relative;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
         width: clamp(260px, 85%, 90%);
-        margin: 0;
         padding: clamp(12px, 2.5vw, 16px);
         background: rgba(255,255,255,0.98);
         z-index: 3;
