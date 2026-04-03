@@ -194,12 +194,25 @@ form .checkbox-group { margin-top: 4px; }
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
 }
-.radio-item label,
-.checkbox-item label { color: #cad4e9; }
+
 .radio-item input[type="radio"],
-.checkbox-item input[type="checkbox"] { accent-color: #a56cff; }
+.checkbox-item input[type="checkbox"] {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: #a56cff;
+}
+
+.radio-item label,
+.checkbox-item label {
+    color: #cad4e9;
+    cursor: pointer;
+    margin: 0;
+    font-weight: 500;
+}
 
 form button {
     margin-top: 12px;
