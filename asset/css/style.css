@@ -91,7 +91,7 @@ nav a:hover {
 .hero::after {
     content: "";
     position: absolute;
-    left: 0; top: 0; right: 0; bottom: 0;
+    left: 50%; top: 50%; right: 0; bottom: 0;
     background: linear-gradient(120deg, rgba(165,108,255,0.55), rgba(82, 61, 126, 0.7));
     pointer-events: none;
     z-index: 1;
@@ -286,8 +286,24 @@ footer a {
 footer a:hover { color: #dad8ff; }
 
 @media(max-width:720px) {
-    .hero-text { padding: 14px; top: 60%; }
-    .hero-text h1 { font-size: 1.8rem; }
+    .hero {
+        min-height: 520px;
+    }
+    .hero-text {
+        position: relative;
+        left: 50%;
+        top: auto;
+        transform: translateX(-50%);
+        width: min(95%, 100%);
+        max-width: 95%;
+        margin: 0 auto;
+        padding: 16px;
+        border-radius: 12px;
+        background: rgba(255,255,255,0.98);
+    }
+    .hero-text h1 { font-size: 1.6rem; }
+    .hero-text p { font-size: 1rem; }
     .cards { grid-template-columns: 1fr; }
     .timer-box { flex-direction: column; }
+    .hero::after { background: linear-gradient(120deg, rgba(165,108,255,0.6), rgba(82,61,126,0.75)); }
 }
