@@ -2,100 +2,89 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Contatos - Devtech</title>
+    <title>Cadastro - Devtech</title>
     <link rel="stylesheet" href="asset/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-     <nav>
+    <nav>
         <a href="index.html">Início</a> |
         <a href="contatos.html">Cadastro</a> |
-        <a href="sobre.html">eventos</a>
+        <a href="sobre.html">Eventos</a>
     </nav>
-    
-    <form action="obrigado.html"> <!-- troca de pagina com somente uma linha de codigo-->
-        <label for="nome">Nome:</label><br>
-        <input type="text" id="nome" name="nome"><br><br>
-        
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email"><br><br>
-        
-        <label for="telefone">Telefone:</label><br>
-        <input type="tel" id="telefone" name="telefone"><br><br>
-        
-        <label for="data_nascimento">Data Nascimento:</label><br>
-        <input type="date" id="data_nascimento" name="data_nascimento"><br><br>
-        
-        <H1>Area de atuação:</H1>
+
+    <form id="cadastro-form">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone">
+
+        <label for="data_nascimento">Data de Nascimento:</label>
+        <input type="date" id="data_nascimento" name="data_nascimento">
+
+        <h1>Área de atuação:</h1>
+        <select id="area" name="area" required>
+            <option value="">Selecionar...</option>
+            <option value="Estudante">Estudante</option>
+            <option value="Desenvolvedor">Desenvolvedor</option>
+            <option value="Profissional de TI">Profissional de TI</option>
+            <option value="Empreendedor">Empreendedor</option>
+            <option value="Outro">Outro</option>
+        </select>
+
+        <h1>Como ficou sabendo?</h1>
         <div class="radio-group">
             <div class="radio-item">
-                <input type="radio" id="estudante" name="area" value="Estudante">
-                <label for="estudante">Estudante</label>
+                <input type="radio" id="insta" name="origem" value="Instagram">
+                <label for="insta">Instagram</label>
             </div>
             <div class="radio-item">
-                <input type="radio" id="desenvolvedor" name="area" value="Desenvolvedor">
-                <label for="desenvolvedor">Desenvolvedor</label>
+                <input type="radio" id="escola" name="origem" value="Faculdade/Escola">
+                <label for="escola">Faculdade/Escola</label>
             </div>
             <div class="radio-item">
-                <input type="radio" id="profissional" name="area" value="Profissional de TI">
-                <label for="profissional">Profissional de TI</label>
+                <input type="radio" id="amigos" name="origem" value="Amigos">
+                <label for="amigos">Amigos</label>
             </div>
             <div class="radio-item">
-                <input type="radio" id="empreendedor" name="area" value="Empreendedor">
-                <label for="empreendedor">Empreendedor</label>
+                <input type="radio" id="redes" name="origem" value="Redes Sociais">
+                <label for="redes">Redes Sociais</label>
             </div>
             <div class="radio-item">
-                <input type="radio" id="outro" name="area" value="Outro">
+                <input type="radio" id="outro" name="origem" value="Outro">
                 <label for="outro">Outro</label>
             </div>
         </div>
 
-        <H1>Como ficou sabendo?:</H1>
-        <div class="radio-group">
-            <div class="radio-item">
-                <input type="radio" id="estudante" name="area" value="Estudante">
-                <label for="estudante">Instagram</label>
-            </div>
-            <div class="radio-item">
-                <input type="radio" id="desenvolvedor" name="area" value="Desenvolvedor">
-                <label for="desenvolvedor">Faculdade/Escola</label>
-            </div>
-            <div class="radio-item">
-                <input type="radio" id="profissional" name="area" value="Profissional de TI">
-                <label for="profissional">Amigos</label>
-            </div>
-            <div class="radio-item">
-                <input type="radio" id="empreendedor" name="area" value="Empreendedor">
-                <label for="empreendedor">Redes Sociais</label>
-            </div>
-            
-            <div class="radio-item">
-                <input type="radio" id="outro" name="area" value="Outro">
-                <label for="outro">Outro</label>
-            </div>
-        </div>
-
-        <H1>Qual atividade voce tem mais interesse?</H1>
+        <h1>Qual atividade tem mais interesse?</h1>
         <div class="checkbox-group">
             <div class="checkbox-item">
-                <input type="checkbox" id="atividade1" name="atividade" value="atividade1">
-                <label for="atividade1">Palestra sobre inteligência artificial</label>
+                <input type="checkbox" id="atividade1" name="atividade" value="Palestra IA">
+                <label for="atividade1">Palestra sobre IA</label>
             </div>
             <div class="checkbox-item">
-                <input type="checkbox" id="atividade2" name="atividade" value="atividade2">
+                <input type="checkbox" id="atividade2" name="atividade" value="Workshop Mobile">
                 <label for="atividade2">Workshop de desenvolvimento mobile</label>
             </div>
             <div class="checkbox-item">
-                <input type="checkbox" id="atividade3" name="atividade" value="atividade3">
+                <input type="checkbox" id="atividade3" name="atividade" value="Ambos">
                 <label for="atividade3">Ambos</label>
             </div>
         </div>
-        
-        <div style="text-align:center; margin-top:20px;">
-            <button type="submit">inscrever-se</button>
-        </div>
-        
+
+        <button type="submit">Inscrever-se</button>
+        <div id="cadastro-message" class="message-confirm"></div>
     </form>
 
-   
+    <footer>
+        DevTech 2026 • Evento tecnológico • Todos os direitos reservados •
+        <a href="mailto:contato@devtech.com">contato@devtech.com</a>
+    </footer>
+
+    <script src="asset/js/script.js"></script>
 </body>
 </html>

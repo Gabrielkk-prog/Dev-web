@@ -1,250 +1,253 @@
-/* Estilos para títulos principais (H1) - Mudamos para fonte de código e cor azul clara para parecer um editor */
-h1 {
-    font-family: 'Courier New', monospace; /* Usa fonte tipo máquina de escrever, como em editores de programação */
-    font-size: 40px;
-    text-align: center;
-    color: #61dafb; /* Cor azul clara, inspirada no VS Code */
-    margin-top: auto;
+/* style.css atualizado - visual moderno para evento tecnológico */
+:root {
+    --bg: #141a22;
+    --bg-card: #1f2834;
+    --text: #dde5ec;
+    --accent: #a56cff;
+    --accent-light: #c78dff;
+    --white: #ffffff;
 }
 
-/* Classe para palavras que parecem "variáveis" no código - cor verde */
-.variable {
-    color: #98c379; /* Verde para destacar palavras como variáveis em linguagens de programação */
+* {
+    box-sizing: border-box;
 }
 
-/* Classe para palavras-chave - cor vermelha */
-.keyword {
-    color: #e06c75; /* Vermelho para palavras importantes, como comandos */
-}
-
-/* Estilos para subtítulos (H2) - Mantém o visual de código com cinza claro */
-h2 {
-    font-family: 'Courier New', monospace;
-    font-size: 20px;
-    text-align: center;
-    color: #abb2bf; /* Cinza claro para texto secundário */
-    margin-top: auto;
-
-}
-
-/* Estilos para parágrafos - Fonte de código e cor cinza */
-p {
-    font-family: 'Courier New', monospace;
-    color: #abb2bf;
-    text-align: center;
-}
-
-/* Estilos para o quadro (container) - Fundo cinza escuro com bordas para parecer um bloco de código */
-.quadro {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #3e4451; /* Fundo cinza médio, como fundo de editor */
-    border: 1px solid #5c6370; /* Borda cinza para delimitar o bloco */
-    border-radius: 5px; /* Cantos arredondados suaves */
-    padding: 20px; /* Espaço interno para não ficar apertado */
-    margin: 20px auto; /* Centraliza e dá espaço em cima/baixo */
-    width: 80%; /* Largura responsiva */
-    max-width: 600px; /* Limite máximo para telas grandes */
-    
-}
-
-.quadro2 {
-      display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px; /* Cantos arredondados suaves */
-    padding: 20px; /* Espaço interno para não ficar apertado */
-    margin: 20px auto; /* Centraliza e dá espaço em cima/baixo */
-    width: 80%; /* Largura responsiva */
-    max-width: 600px; /* Limite máximo para telas grandes */
-}
-/* Estilos para imagens - Mantém centralizada */
-img {
-    width: 150px;
-    height: auto;
-    display: block;
-    margin: 20px auto;
-}
-
-/* Estilos para o corpo da página - Fundo escuro para visual de IDE */
 body {
-    background-color: #2d3339; /* Fundo cinza escuro, como em editores noturnos */
-    color: #abb2bf; /* Cor padrão do texto em cinza claro */
-    font-family: 'Courier New', monospace; /* Fonte de código para tudo */
+    margin: 0;
+    background: linear-gradient(145deg, #121a24 0%, #1d2633 60%, #1b2632 100%);
+    color: var(--text);
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    line-height: 1.5;
 }
 
-/* Estilos para a navegação - Barra superior como abas de editor */
 nav {
-    background-color: #21252b; /* Fundo ainda mais escuro para a barra */
-    padding: 10px; /* Espaço interno */
+    padding: 14px;
     text-align: center;
-    border-bottom: 1px solid #5c6370; /* Linha separadora embaixo */
+    background: rgba(20, 30, 40, 0.92);
+    border-bottom: 1px solid #2f3b4a;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
-
-/* Links na navegação - Cores de código */                /* Puis tres efeitos para a mesma nav*/
 nav a {
-    color: #61dafb; /* Azul para links */
-    text-decoration: none; /* Sem sublinhado */
-    margin: 0 10px; /* Espaço entre links */
-    font-family: 'Courier New', monospace;
+    color: var(--white);
+    text-decoration: none;
+    margin: 0 14px;
+    font-weight: 600;
 }
-
-/* Efeito ao passar o mouse nos links */
 nav a:hover {
-    color: #98c379; /* Muda para verde ao hover */
+    color: var(--accent-light);
 }
 
-/* Estilos para formulários - Como um painel de entrada de código */
-form {
-    background-color: #3e4451; /* Fundo cinza, igual ao quadro */
-    border: 1px solid #5c6370; /* Borda para parecer um campo */
-    border-radius: 5px; /* Cantos arredondados */
-    padding: 20px; /* Espaço interno */
-    margin: 20px auto; /* Centraliza */
-    width: 80%; /* Largura responsiva */
-    max-width: 400px; /* Limite para formulários */
+.hero {
+    position: relative;
+    margin: 0 auto;
+}
+.hero img {
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    filter: brightness(0.65);
+}
+.hero::after {
+    content: "";
+    position: absolute;
+    left: 0; top: 0; right: 0; bottom: 0;
+    background: linear-gradient(120deg, rgba(165,108,255,0.55), rgba(82, 61, 126, 0.7));
+    pointer-events: none;
+}
+.hero-text {
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    background: rgba(255,255,255,0.92);
+    color: #1f2530;
+    padding: 18px 20px;
+    max-width: 780px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+.hero-text h1 {
+    margin: 0 0 8px;
+    font-size: clamp(1.6rem, 3.8vw, 2.6rem);
+    color: #2c1a4d;
+}
+.hero-text p {
+    margin: 0;
+    font-size: clamp(1rem, 2.4vw, 1.25rem);
+    color: #344152;
+}
+
+.quadro {
+    background: rgba(255,255,255,0.09);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 14px;
+    padding: 20px 18px;
+    margin: 22px auto;
+    width: min(94%, 900px);
+    backdrop-filter: blur(6px);
+}
+
+.cards {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(238px, 1fr));
+    margin: 20px auto;
+    width: min(94%, 1000px);
+}
+.card {
+    background: #17212e;
+    border: 1px solid #2f3b4c;
+    border-radius: 12px;
+    padding: 16px 14px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.card:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 14px 30px rgba(45, 69, 111, 0.45);
+    border-color: #6d4bff;
+}
+.card h3 {
+    margin: 12px 0 8px;
+    font-size: 1.15rem;
+    color: var(--white);
+}
+.card p {
+    margin: 0;
+    color: #b7c4d4;
+    font-size: 0.96rem;
+}
+.card i {
+    color: #9f80ff;
+    font-size: 1.35rem;
+    margin-right: 0.6rem;
+    vertical-align: middle;
+}
+
+.timer-box {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+    align-items: center;
+    margin: 20px auto 8px;
+    width: min(94%, 750px);
 }
-
-/* Rótulos dos campos - Cor cinza */
-label {
-    color: #abb2bf;
-}
-
-form > label {
-    display: block;
-    margin-top: 10px;
-    margin-bottom: 5px;
-}
-
-/* Estilos para grupo de radio buttons */
-.radio-group {
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-    margin-bottom: 15px;
-    padding-left: 0;
-}
-
-.radio-item {
+.timer-item {
     display: flex;
     align-items: center;
-    margin-bottom: 8px;
-    padding-left: 0;
+    gap: 10px;
+    background: rgba(26, 36, 49, 0.88);
+    border: 1px solid #37455b;
+    border-radius: 10px;
+    padding: 10px 14px;
+    color: #d9e3ef;
+    font-weight: 600;
+    min-width: 190px;
+}
+.timer-item i { color: #a389ff; }
+
+#tempo {
+    font-weight: 700;
+    color: #dff4ff;
 }
 
-.radio-item input[type="radio"] {
-    margin-right: 10px;
-    flex-shrink: 0;
+form {
+    background: rgba(20, 27, 39, 0.96);
+    border: 1px solid rgba(117, 112, 255, 0.28);
+    border-radius: 12px;
+    padding: 24px;
+    margin: 20px auto 20px;
+    width: min(94%, 460px);
+}
+form label { color: #d0dbec; font-weight: 600; }
+form input,
+form select {
+    width: 100%;
+    margin-top: 4px;
+    margin-bottom: 14px;
+    padding: 10px 10px;
+    font-size: 0.98rem;
+    border-radius: 6px;
+    border: 1px solid #3a4b65;
+    background: #122033;
+    color: #edf3ff;
+}
+form input:focus,
+form select:focus {
+    border-color: var(--accent);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(165,108,255,0.22);
+}
+form h1 {
+    margin: 18px 0 10px;
+    font-size: 1.12rem;
+    color: #a9ccff;
+    text-transform: uppercase;
 }
 
-.radio-item label {
-    color: #abb2bf;
-    margin: 0;
-}
-
-/* Estilos para grupo de checkboxes */
-.checkbox-group {
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-    margin-bottom: 15px;
-    padding-left: 0;
-}
-
+form .radio-group,
+form .checkbox-group { margin-top: 4px; }
+.radio-item,
 .checkbox-item {
     display: flex;
     align-items: center;
+    gap: 10px;
     margin-bottom: 8px;
-    padding-left: 0;
 }
+.radio-item label,
+.checkbox-item label { color: #cad4e9; }
+.radio-item input[type="radio"],
+.checkbox-item input[type="checkbox"] { accent-color: #a56cff; }
 
-.checkbox-item input[type="checkbox"] {
-    margin-right: 10px;
-    flex-shrink: 0;
-}
-
-.checkbox-item label {
-    color: #abb2bf;
-    margin: 0;
-}
-
-.custume-radio input[type="radio"]{
-    display: none;
-
-}
-/* Campos de entrada e selects - Estilo de caixa de código */
-input, select {
-    background-color: #21252b; /* Fundo escuro para os campos */
-    color: #abb2bf; /* Texto cinza */
-    border: 1px solid #5c6370; /* Borda cinza */
-    border-radius: 3px; /* Cantos levemente arredondados */
-    padding: 5px; /* Espaço interno pequeno */
-    margin-bottom: 10px; /* Espaço abaixo */
-    width: 100%; /* Largura total */
-    font-family: 'Courier New', monospace;
-}
-
-input[type="radio"],
-input[type="checkbox"] {
-    width: auto;
-    margin-bottom: 0;
-    padding: 0;
-}
-
-/* Estilos para H1 dentro do form */
-form H1 {
-    font-size: 18px;
-    margin: 15px 0 10px 0;
-    text-align: left;
-    color: #61dafb;
-}
-
-/* Efeito ao focar nos campos - Borda azul */
-input:focus, select:focus {
-    border-color: #61dafb; /* Borda azul ao clicar */
-    outline: none; /* Remove o contorno padrão do navegador */
-}
-
-/* Estilos para botões dentro do form */
 form button {
-    background-color: #22b9df; /* Fundo azul para o botão */
-    color: #21252b; /* Texto escuro para contraste */
-    border: none; /* Sem borda */
-    border-radius: 3px; /* Cantos arredondados */
-    padding: 10px 20px; /* Espaço interno */
-    font-family: 'Courier New', monospace; /* Fonte de código */
-    font-size: 16px;
-    cursor: pointer; /* Cursor de mão ao passar */
+    margin-top: 12px;
+    width: 100%;
+    background: linear-gradient(135deg, #5a59ee, #8a6bff);
+    color: #1b1f2c;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform .2s ease, opacity .2s ease;
 }
-
 form button:hover {
-    background: #55daff;
+    transform: translateY(-2px);
+    opacity: 0.92;
 }
 
-/* Variável global para fonte - Agora usa monospace para consistência */
-:root {
-    --fonte: 'Courier New', monospace; /* Define a fonte padrão como de código */
+.message-confirm {
+    display:none;
+    margin-top:12px;
+    border:1px solid #66ffba;
+    background:#1d2f40;
+    color:#b3ffe0;
+    padding:10px;
+    border-radius: 7px;
+    font-weight: 600;
 }
-.btn {
-    display: flex;
-    background-color: #22b9df; /* Fundo azul para o botão */
-    color: #21252b; /* Texto escuro para contraste */
-    border: none; /* Sem borda */
-    border-radius: 3px; /* Cantos arredondados */
-    padding: 10px 20px; /* Espaço interno */
-    width: 100px;
-    font-family: 'Courier New', monospace; /* Fonte de código */
-    font-size: 16px;
-    cursor: pointer; /* Cursor de mão ao passar */
-    margin-top: 20px;
-    align-items: center;
-}
-.btn:hover {
-    background: #55daff;
 
+footer {
+    margin-top: 30px;
+    background: rgba(16, 24, 34, 0.96);
+    color: #9fb7d0;
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 16px 14px;
+    border-top: 1px solid #2d3c56;
+}
+footer a {
+    color: #a98cff;
+    text-decoration: none;
+}
+footer a:hover { color: #dad8ff; }
+
+@media(max-width:720px) {
+    .hero-text { padding: 14px; top: 60%; }
+    .hero-text h1 { font-size: 1.8rem; }
+    .cards { grid-template-columns: 1fr; }
+    .timer-box { flex-direction: column; }
 }

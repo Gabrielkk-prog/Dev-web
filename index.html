@@ -1,55 +1,57 @@
-
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <title>Devtech</title>
-    <link rel="stylesheet" href="asset/css/style.css"><!--todos tem esse cara.-->
+    <link rel="stylesheet" href="asset/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-iYt/..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body> 
- 
-    
-    <nav><!--links para navegar entre as paginas-->
-        <a href="index.html">Início</a> |  
+<body>
+    <nav>
+        <a href="index.html">Início</a> |
         <a href="contatos.html">Cadastro</a> |
-        <a href="sobre.html"> eventos</a>
+        <a href="sobre.html">Eventos</a>
     </nav>
 
-    <img src="asset/img/logo.png" alt="Imagem da capa">
+    <section class="hero">
+        <img src="asset/img/banner.jpg" alt="Banner DevTech">
+        <div class="hero-text">
+            <h1>DevTech 2026 - O Futuro da IA e Mobile</h1>
+            <p>Experiências imersivas com palestras, workshops e networking para impulsionar sua carreira.</p>
+        </div>
+    </section>
 
+    <div class="timer-box quadro2">
+        <div class="timer-item"><i class="fa-solid fa-calendar"></i>Data: 23/07/2026</div>
+        <div class="timer-item"><i class="fa-solid fa-clock"></i><span id="tempo"></span></div>
+    </div>
 
-      <div class = "quadro2">
+    <section class="quadro">
+        <div class="cards">
+            <article class="card">
+                <h3><i class="fa-solid fa-robot"></i>Inteligência Artificial</h3>
+                <p>Palestras de especialistas sobre impactos da IA e ética digital.</p>
+            </article>
+            <article class="card">
+                <h3><i class="fa-solid fa-mobile-screen-button"></i>Desenvolvimento Mobile</h3>
+                <p>Workshops para criação de apps Android e iOS com as melhores práticas.</p>
+            </article>
+            <article class="card">
+                <h3><i class="fa-solid fa-comments"></i>Networking</h3>
+                <p>Conexões entre profissionais, empresas e novas oportunidades.</p>
+            </article>
+            <article class="card">
+                <h3><i class="fa-solid fa-graduation-cap"></i>Capacitação</h3>
+                <p>Aprendizado prático e hands-on com cases reais de tecnologia.</p>
+            </article>
+        </div>
+    </section>
 
-   <h1>
-    faltam: <p id="tempo"></p>
-   </h1>
+    <footer>
+        DevTech 2026 • Evento tecnológico • Todos os direitos reservados •
+        <a href="mailto:contato@devtech.com">contato@devtech.com</a>
+    </footer>
 
-  </div>
-    
-        <h1>DevTech - <span class="variable">IA</span> e <span class="keyword">Desenvolvimento Mobile;</span></h1><br>
-
-      <h1>Local do <span class="keyword">Evento:</span>
-{Teatro Colégio Londrinense} - Av. Juscelino Kubitscheck, 1652 - Quebec, Londrina - PR;</h1><br>
-
-<div>
-    <div class = "quadro">
-
-    <h2>Vivemos em uma era em que a Inteligência Artificial está transformando rapidamente a forma como consumimos informação e desenvolvemos tecnologia. Pensando nisso, este evento foi criado para promover conhecimento, consciência digital e capacitação prática.
-Durante o encontro, especialistas irão apresentar palestras sobre conscientização em Inteligência Artificial, abordando temas importantes como o impacto da IA no dia a dia e como identificar imagens e vídeos falsos (deepfakes), um dos grandes desafios da informação na internet atualmente.
-Além das palestras, o evento contará com um workshop prático de desenvolvimento de aplicativos mobile, onde os participantes terão a oportunidade de aprender conceitos e técnicas para criar aplicativos para Android e iOS, explorando ferramentas modernas e boas práticas de desenvolvimento.
-O objetivo é unir educação tecnológica, pensamento crítico e prática, preparando os participantes tanto para compreender os riscos e oportunidades da IA quanto para desenvolver suas próprias soluções tecnológicas.
-Este evento é ideal para estudantes, desenvolvedores, profissionais de tecnologia e qualquer pessoa interessada em inovação digital.</h2><br>  <!--o texto que escrevo no index fica no index.-->
-
-</div>
-
-    <h1>Contatos:</h1>
-    <h2>Entre em contato conosco:</h2><br>
-    <h1>Telefone:(11) 1234-5678</h1><br>
-    <p></p>
-    <h2>Data do Evento: 
-23/07/26</h2><br>
-
-<script src="asset/js/script.js"></script>
-
+    <script src="asset/js/script.js"></script>
 </body>
 </html>
