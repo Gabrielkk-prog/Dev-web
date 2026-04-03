@@ -13,6 +13,26 @@ function atualizarContador() {
 setInterval(atualizarContador, 1000);
 atualizarContador();
 
+function cadastrar() {
+    console.log("Cadastrar function called");
+    
+    // Validação simples
+    const nome = document.getElementById("nome").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const area = document.getElementById("area").value;
+    
+    if (!nome || !email || !area) {
+        alert("Por favor, preencha todos os campos obrigatórios: Nome, Email e Área de atuação.");
+        return;
+    }
+    
+    const message = document.getElementById("cadastro-message");
+    message.innerText = "Cadastro realizado com sucesso! Obrigado por participar.";
+    message.style.display = "block";
+    message.scrollIntoView({ behavior: "smooth", block: "center" });
+    document.getElementById("cadastro-form").reset();
+}
+
 document.addEventListener("DOMContentLoaded", function() {
     // Máscara de telefone
     const telefoneInput = document.getElementById("telefone");
@@ -25,32 +45,5 @@ document.addEventListener("DOMContentLoaded", function() {
                 e.target.value = value;
             }
         });
-    }
-
-    const cadastroForm = document.getElementById("cadastro-form");
-    if (cadastroForm) {
-        cadastroForm.addEventListener("submit", function (event) {
-            console.log("Submit event triggered");
-            event.preventDefault();
-            console.log("Form submitted");
-            
-            // Validação simples
-            const nome = document.getElementById("nome").value.trim();
-            const email = document.getElementById("email").value.trim();
-            const area = document.getElementById("area").value;
-            
-            if (!nome || !email || !area) {
-                alert("Por favor, preencha todos os campos obrigatórios: Nome, Email e Área de atuação.");
-                return;
-            }
-            
-            const message = document.getElementById("cadastro-message");
-            message.innerText = "Cadastro realizado com sucesso! Obrigado por participar.";
-            message.style.display = "block";
-            message.scrollIntoView({ behavior: "smooth", block: "center" });
-            cadastroForm.reset();
-        });
-    } else {
-        console.log("Form not found");
     }
 });
