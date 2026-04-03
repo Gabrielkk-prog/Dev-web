@@ -270,7 +270,7 @@ footer a:hover { color: #dad8ff; }
         display: flex;
         align-items: center;
         justify-content: center;
-        min-height: 520px;
+        min-height: 100px;
         position: relative;
     }
     .hero img {
