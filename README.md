@@ -6,7 +6,7 @@ Este é um site estático para promover o evento DevTech, focado em Inteligênci
 
 O site contém três páginas principais:
 - **index.html**: Página inicial com informações sobre o evento, local, data e contatos.
-- **contatos.html**: Página de cadastro com formulário para inscrição no evento.
+- **cadastro.html**: Página de cadastro com formulário para inscrição no evento.
 - **sobre.html**: Página sobre o evento (atualmente vazia).
 
 ## Estrutura do Projeto
@@ -14,7 +14,7 @@ O site contém três páginas principais:
 ```
 Dev-web/
 ├── index.html          # Página inicial
-├── contatos.html       # Página de cadastro
+├── cadastro.html       # Página de cadastro
 ├── sobre.html          # Página sobre/eventos
 └── asset/
     ├── css/
