@@ -41,5 +41,5 @@ Para mais informações sobre o evento:
 - Local: Teatro Colégio Londrinense - Av. Juscelino Kubitscheck, 1652 - Quebec, Londrina - PR
 
 ## Desenvolvimento
-
+Obs:Foi idealizado para ser visualizado em despositivos mobile, logo ja existe um sistema de ajuste altomatico de layoult. 
 O projeto é um site estático simples, sem necessidade de servidor ou build process. Para editar, basta modificar os arquivos HTML e CSS diretamente.
