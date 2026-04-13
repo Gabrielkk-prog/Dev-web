@@ -1,5 +1,6 @@
 const dataEvento = new Date(2026, 7, 23, 19, 0, 0);
-
+const meuCheckbox = document.getElementById('marcarTodos');
+const campoTexto = document.getElementById('opiniao');
 function atualizarContador() {
     const agora = new Date();
     const diferenca = dataEvento - agora;
