@@ -34,17 +34,24 @@ function cadastrar() {
     document.getElementById("cadastro-form").reset();
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    // Máscara de telefone
-    const telefoneInput = document.getElementById("telefone");
-    if (telefoneInput) {
-        telefoneInput.addEventListener("input", function(e) {
-            let value = e.target.value.replace(/\D/g, '');
-            if (value.length <= 11) {
-                value = value.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
-                value = value.replace(/(\d{2})(\d{4})(\d{4})/, '($1) $2-$3');
-                e.target.value = value;
-            }
+
+        
+            // CHECKBOX "OUTROS"
+     document.addEventListener("DOMContentLoaded", function () {
+
+    let outrosCheck = document.getElementById("outrosCheck");
+    let outrosTexto = document.getElementById("outrosTexto");
+
+    outrosCheck.addEventListener("change", function () {
+
+        if (this.checked) {
+            outrosTexto.disabled = false;
+            outrosTexto.required = true;
+        } else {
+            outrosTexto.disabled = true;
+            outrosTexto.required = false;
+            outrosTexto.value = "";
+        }
         });
     }
-});
+);
