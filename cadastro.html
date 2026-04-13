@@ -79,11 +79,30 @@
 
             <label>
   <input type="checkbox" id="Ambos" onclick="toggleTudo(this)"> 
+
+
   <strong>Marcar todas as opções</strong>
 </label>
           <div id="Ambos" style="margin-left: 20px; margin-top: 10px;">
   <label><input type="checkbox" class="opcao">Ambos</label><br>
 
+  <label>Como ficou sabendo do evento?</label>
+<div class="grupo">
+    <label><input type="checkbox" name="origem" value="instagram"> Instagram</label>
+    <label><input type="checkbox" name="origem" value="faculdade"> Faculdade / Escola</label>
+    <label><input type="checkbox" name="origem" value="amigos"> Amigos</label>
+    <label><input type="checkbox" name="origem" value="internet"> Internet</label>
+    <label><input type="checkbox" id="outrosCheck"> Outros</label>
+  </div>
+
+
+    <input type="text" id="outrosTexto" placeholder="Digite aqui" disabled>
+
+        <label>Observações ou expectativas:</label>
+        <textarea name="mensagem" rows="4"></textarea>
+
+    </form>
+  </div>
         </div>
 
         <button type="button" onclick="cadastrar()">Inscrever-se</button>
