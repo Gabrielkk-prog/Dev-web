@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html>
 <head>
     <meta charset="UTF-8">
@@ -6,115 +6,70 @@
     <title>Cadastro - Devtech</title>
     <link rel="icon" type="image/png" href="asset/img/logo.png">
     <link rel="stylesheet" href="asset/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <nav>
-        <a href="index.html">Início</a> |
-        <a href="cadastro.html">Cadastro</a> |
-        <a href="sobre.html">Eventos</a>
-    </nav>
 
-    <form id="cadastro-form" action="#">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome">
+<nav>
+    <a href="index.html">Início</a> |
+    <a href="cadastro.html">Cadastro</a> |
+    <a href="sobre.html">Eventos</a>
+</nav>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email">
+<!-- 
+    INTEGRAÇÃO COM FORMSPREE
+    action = URL do seu formulário
+    method = POST (obrigatório para envio)
+-->
+<form id="cadastro-form" action="https://formspree.io/f/xrejzavv" method="POST">
 
-        <label for="telefone">Telefone:</label>
-        <input type="tel" id="telefone" name="telefone">
+    <!-- Campos precisam de "name" -->
+    <label>Nome:</label>
+    <input type="text" name="nome" required>
 
-        <label for="data_nascimento">Data de Nascimento:</label>
-        <input type="date" id="data_nascimento" name="data_nascimento">
+    <label>Email:</label>
+    <input type="email" name="email" required>
 
-        <h1>Área de atuação:</h1>
-        <select id="area" name="area">
-            <option value="">Selecionar...</option>
-            <option value="Estudante">Estudante</option>
-            <option value="Desenvolvedor">Desenvolvedor</option>
-            <option value="Profissional de TI">Profissional de TI</option>
-            <option value="Empreendedor">Empreendedor</option>
-            <option value="Outro">Outro</option>
-        </select>
+    <label>Telefone:</label>
+    <input type="tel" name="telefone">
 
-        <h1>Como ficou sabendo?</h1>
-        <div class="radio-group">
-            <div class="radio-item">
-                <input type="radio" id="insta" name="origem" value="Instagram">
-                <label for="insta">Instagram</label>
-            </div>
-            <div class="radio-item">
-                <input type="radio" id="escola" name="origem" value="Faculdade/Escola">
-                <label for="escola">Faculdade/Escola</label>
-            </div>
-            <div class="radio-item">
-                <input type="radio" id="amigos" name="origem" value="Amigos">
-                <label for="amigos">Amigos</label>
-            </div>
-            <div class="radio-item">
-                <input type="radio" id="redes" name="origem" value="Redes Sociais">
-                <label for="redes">Redes Sociais</label>
-            </div>
-            <div class="radio-item">
-                <input type="radio" id="outro" name="origem" value="Outro">
-                <label for="outro">Outro</label>
-            </div>
-        </div>
+    <label>Data de Nascimento:</label>
+    <input type="date" name="data_nascimento">
 
-        <h1>Qual atividade tem mais interesse?</h1>
-        <div class="checkbox-group">
-            <div class="checkbox-item">
-                <input type="checkbox" id="atividade1" name="atividade" value="Palestra IA">
-                <label for="atividade1">Palestra sobre IA</label>
-            </div>
-            <div class="checkbox-item">
-                <input type="checkbox" id="atividade2" name="atividade" value="Workshop Mobile">
-                <label for="atividade2">Workshop de desenvolvimento mobile</label>
-            </div>
-            <div class="checkbox-item">
-                <input type="checkbox" id="atividade3" name="atividade" value="Ambos">
-                <label for="atividade3">Ambos</label>
-            </div>
+    <h3>Área de atuação:</h3>
+    <select name="area">
+        <option value="">Selecionar...</option>
+        <option>Estudante</option>
+        <option>Desenvolvedor</option>
+        <option>Profissional de TI</option>
+        <option>Empreendedor</option>
+        <option>Outro</option>
+    </select>
 
-            <label>
-  <input type="checkbox" id="Ambos" onclick="toggleTudo(this)"> 
+    <h3>Como ficou sabendo?</h3>
+    <!-- Radios precisam ter o mesmo name -->
+    <label><input type="radio" name="origem" value="Instagram"> Instagram</label>
+    <label><input type="radio" name="origem" value="Faculdade"> Faculdade</label>
+    <label><input type="radio" name="origem" value="Amigos"> Amigos</label>
 
+    <h3>Interesses:</h3>
+    <!-- Para múltiplos valores use name="atividade[]" -->
+    <label><input type="checkbox" name="atividade[]" value="IA"> Palestra IA</label>
+    <label><input type="checkbox" name="atividade[]" value="Mobile"> Workshop Mobile</label>
 
-  <strong>Marcar todas as opções</strong>
-</label>
-          <div id="Ambos" style="margin-left: 20px; margin-top: 10px;">
-  <label><input type="checkbox" class="opcao">Ambos</label><br>
+    <label>Observações:</label>
+    <textarea name="mensagem"></textarea>
 
-  <label>Como ficou sabendo do evento?</label>
+    <!-- 
+        BOTÃO CORRETO
+        type="submit" envia automaticamente para o Formspree
+    -->
+    <button type="submit">Inscrever-se</button>
 
-  <div class="grupo">
-    <label><input type="checkbox" name="origem" value="instagram"> Instagram</label>
-    <label><input type="checkbox" name="origem" value="faculdade"> Faculdade / Escola</label>
-    <label><input type="checkbox" name="origem" value="amigos"> Amigos</label>
-    <label><input type="checkbox" name="origem" value="internet"> Internet</label>
-    <label><input type="checkbox" id="outrosCheck"> Outros</label>
-  </div>
+</form>
 
+<footer>
+    DevTech 2026 • Evento tecnológico
+</footer>
 
-    <input type="text" id="outrosTexto" placeholder="Digite aqui" disabled>
-
-        <label>Observações ou expectativas:</label>
-        <textarea name="mensagem" rows="4"></textarea>
-
-    </form>
-  </div>
-        </div>
-
-        <button type="button" onclick="cadastrar()">Inscrever-se</button>
-        <div id="cadastro-message" class="message-confirm"></div>
-    </form>
-
-    <footer>
-        DevTech 2026 • Evento tecnológico • Todos os direitos reservados •
-        <a href="mailto:contato@devtech.com">contato@devtech.com</a>
-    </footer>
-
-    <script src="asset/js/script.js"></script>
 </body>
 </html>
