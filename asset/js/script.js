@@ -29,32 +29,10 @@ function cadastrar(event) {
     // AGORA sim envia pro Formspree
     document.getElementById("cadastro-form").submit();
 
-    
     const message = document.getElementById("cadastro-message");
     message.innerText = "Cadastro realizado com sucesso! Obrigado por participar.";
     message.style.display = "block";
     message.scrollIntoView({ behavior: "smooth", block: "center" });
-    document.getElementById("cadastro-form").reset();
 }
 
 
-        
-            // CHECKBOX "OUTROS"
-     document.addEventListener("DOMContentLoaded", function () {
-
-    let outrosCheck = document.getElementById("outrosCheck");
-    let outrosTexto = document.getElementById("outrosTexto");
-
-    outrosCheck.addEventListener("change", function () {
-
-        if (this.checked) {
-            outrosTexto.disabled = false;
-            outrosTexto.required = true;
-        } else {
-            outrosTexto.disabled = true;
-            outrosTexto.required = false;
-            outrosTexto.value = "";
-        }
-        });
-    }
-);

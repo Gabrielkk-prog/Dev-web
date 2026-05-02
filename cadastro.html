@@ -20,23 +20,23 @@
     action = URL do seu formulário
     method = POST (obrigatório para envio)
 -->
-<form id="cadastro-form" action="https://formspree.io/f/xrejzavv" method="POST" onsubmit="cadastrar(event)"></form>
+<form id="cadastro-form" action="https://formspree.io/f/xrejzavv" method="POST" onsubmit="cadastrar(event)">
 
     <!-- Campos precisam de "name" -->
     <label>Nome:</label>
-    <input type="text" name="nome" required>
+    <input type="text" id="nome" name="nome" required>
 
     <label>Email:</label>
-    <input type="email" name="email" required>
+    <input type="email" id="email" name="email" required>
 
     <label>Telefone:</label>
-    <input type="tel" name="telefone">
+    <input type="tel" id="telefone" name="telefone">
 
     <label>Data de Nascimento:</label>
-    <input type="date" name="data_nascimento">
+    <input type="date" id="data_nascimento" name="data_nascimento">
 
     <h3>Área de atuação:</h3>
-    <select name="area">
+    <select id="area" name="area">
         <option value="">Selecionar...</option>
         <option>Estudante</option>
         <option>Desenvolvedor</option>
@@ -57,13 +57,15 @@
     <label><input type="checkbox" name="atividade[]" value="Mobile"> Workshop Mobile</label>
 
     <label>Observações:</label>
-    <textarea name="mensagem"></textarea>
+    <textarea id="mensagem" name="mensagem"></textarea>
 
     <!-- 
         BOTÃO CORRETO
         type="submit" envia automaticamente para o Formspree
     -->
     <button type="submit">Inscrever-se</button>
+
+    <div id="cadastro-message" class="message-confirm"></div>
 
 </form>
 
