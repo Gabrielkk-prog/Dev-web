@@ -14,18 +14,21 @@ function atualizarContador() {
 setInterval(atualizarContador, 1000);
 atualizarContador();
 
-function cadastrar() {
-    console.log("Cadastrar function called");
-    
-    // Validação simples
+function cadastrar(event) {
+    event.preventDefault(); // impede envio automático
+
     const nome = document.getElementById("nome").value.trim();
     const email = document.getElementById("email").value.trim();
     const area = document.getElementById("area").value;
-    
+
     if (!nome || !email || !area) {
-        alert("Por favor, preencha todos os campos obrigatórios: Nome, Email e Área de atuação.");
+        alert("Preencha Nome, Email e Área.");
         return;
     }
+
+    // AGORA sim envia pro Formspree
+    document.getElementById("cadastro-form").submit();
+
     
     const message = document.getElementById("cadastro-message");
     message.innerText = "Cadastro realizado com sucesso! Obrigado por participar.";
