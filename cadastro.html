@@ -7,13 +7,21 @@
     <link rel="icon" type="image/png" href="asset/img/logo.png">
     <link rel="stylesheet" href="asset/css/style.css">
 </head>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
+<script>
+const supabaseClient = supabase.createClient(
+  "https://qgnaenyrbxgjaesejhoc.supabase.co",
+  "Cachorro$podcast888-bbb2025"
+);
+</script>
+
 <body>
 
-<nav>
-    <a href="index.html">Início</a> |
-    <a href="cadastro.html">Cadastro</a> |
-    <a href="sobre.html">Eventos</a>
-</nav>
+    <form id="cadastro-form" action="https://formspree.io/f/xrejzavv" method="post">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome">
 
 <!-- 
     INTEGRAÇÃO COM FORMSPREE
@@ -72,6 +80,62 @@
 <footer>
     DevTech 2026 • Evento tecnológico
 </footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const form = document.getElementById("formCadastro");
+    const botao = document.getElementById("btnEnviar");
+    const outrosCheck = document.getElementById("outrosCheck");
+    const outrosTexto = document.getElementById("outrosTexto");
+
+    // habilitar campo "outros"
+    outrosCheck.addEventListener("change", () => {
+        outrosTexto.disabled = !outrosCheck.checked;
+    });
+
+    form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+
+        botao.disabled = true;
+        botao.innerText = "Enviando...";
+
+        const formData = new FormData(form);
+
+        const dados = {
+            nome: formData.get("nome"),
+            email: formData.get("email"),
+            telefone: formData.get("telefone"),
+            nascimento: formData.get("nascimento"),
+            area: formData.get("area"),
+            atuacao: formData.get("atuacao"),
+            interesse: formData.getAll("interesse[]").join(", "),
+            fonte: formData.get("fonte"),
+            fonte_outros: formData.get("fonte_outros"),
+            outros: formData.get("outros"),
+        };
+
+        try {
+            const { error } = await supabaseClient
+                .from("Cadastro") // ⚠️ CONFIRME o nome da tabela
+                .insert([dados]);
+
+            if (error) throw error;
+
+            alert("Cadastro realizado com sucesso!");
+            form.reset();
+
+        } catch (err) {
+            console.error(err);
+            alert("Erro ao salvar no banco.");
+        }
+
+        botao.disabled = false;
+        botao.innerText = "Confirmar Inscrição";
+    });
+
+});
+</script>
 
 </body>
 </html>
