@@ -19,16 +19,8 @@ const supabaseClient = supabase.createClient(
 
 <body>
 
-    <form id="cadastro-form" action="https://formspree.io/f/xrejzavv" method="post">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome">
 
-<!-- 
-    INTEGRAÇÃO COM FORMSPREE
-    action = URL do seu formulário
-    method = POST (obrigatório para envio)
--->
-<form id="cadastro-form" action="https://formspree.io/f/xrejzavv" method="POST" onsubmit="cadastrar(event)">
+<form id="cadastro-form" >
 
     <!-- Campos precisam de "name" -->
     <label>Nome:</label>
