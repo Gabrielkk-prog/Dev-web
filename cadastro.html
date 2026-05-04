@@ -78,13 +78,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const form = document.getElementById("cadastro-form");
     const botao = document.getElementById("btnEnviar");
-    const outrosCheck = document.getElementById("outrosCheck");
-    const outrosTexto = document.getElementById("outrosTexto");
-
-    // habilitar campo "outros"
-    outrosCheck.addEventListener("change", () => {
-        outrosTexto.disabled = !outrosCheck.checked;
-    });
 
     form.addEventListener("submit", async function (e) {
         e.preventDefault();
